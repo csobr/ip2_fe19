@@ -15,21 +15,21 @@
   },
   {
     "name": "Unit",
-    "backgroundImage": "https://via.placeholder.com/300",
+    "backgroundImage": "./unit/unit_background.png",
     "year": "2018",
     "description": "Unit is a fashion rental marketplace where local businesses rent out their clothes to anyone through the app.",
     "stack": "Swift"
   },
   {
     "name": "Wore",
-    "backgroundImage": "https://via.placeholder.com/300",
+    "backgroundImage": "./wore/wore_background.png",
     "year": "2017",
     "description": "Modest fashion from the high street.",
     "stack": " Html,CSS, JavaScript"
   },
   {
     "name": "Mashiin",
-    "backgroundImage": "https://via.placeholder.com/300",
+    "backgroundImage": "./mashiin/mashiin.png",
     "description": "Secret Project"
   }
 ]
