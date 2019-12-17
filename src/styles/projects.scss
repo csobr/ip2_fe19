@@ -19,24 +19,27 @@ body {
 .grid {
   display: flex;
   flex-direction: row;
-  flex-flow: wrap;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
+  width: 50%;
+  overflow: scroll;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 .item {
-  width: 200px;
+  width: 30rem;
+
   flex-direction: column;
+  height: 100%;
   font-size: 0.8rem;
   background: rgb(255, 255, 255);
 }
 .item--image img {
-  width: 200px;
+  width: 20rem;
 }
 .item--text {
   line-height: 1.4rem;
-  width: 200px;
-  margin: 0 auto;
+  width: 20rem;
 }
 .item--name {
   font-weight: 600;
