@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import projects from '../data/projects.json';
+import projects from "../data/projects.json";
+import "../styles/projects.scss";
 
 export default class Projects extends Component {
   renderProjects() {
@@ -8,12 +9,12 @@ export default class Projects extends Component {
       return (
         <div key={name}>
           <div className="item">
-            {name}
             <div className="item--image">
               <img src={backgroundImage} alt="Project Image"></img>
             </div>
             <div className="item--text">
-              <p className ="item--year">{year}</p>
+              <p className="item--name">{name}</p>
+              <p className="item--year">{year}</p>
               <p className="item--description">{description}</p>
               <p className="item--stack">{stack}</p>
             </div>

@@ -6,8 +6,6 @@ module.exports = {
   }
 };
 
-
-
 module.exports = withSass({
   /* config options here */
 });
