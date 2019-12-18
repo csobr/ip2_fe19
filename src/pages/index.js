@@ -10,7 +10,11 @@ export default class Projects extends Component {
         <div key={name}>
           <div className="item">
             <div className="item--image">
-              <img src={backgroundImage} alt="Project Image"></img>
+              <img
+                loading="lazy"
+                src={backgroundImage}
+                alt="Project Image"
+              ></img>
             </div>
             <div className="item--text">
               <p className="item--name">{name}</p>
@@ -25,8 +29,12 @@ export default class Projects extends Component {
   }
   render() {
     return (
-      <div className="projects--wrapper">
-        <div className="grid">{this.renderProjects()}</div>
+      <div>
+        <h2 className="projects--header">Projects</h2>
+
+        <div className="projects--wrapper">
+          <div className="grid">{this.renderProjects()}</div>
+        </div>
       </div>
     );
   }
