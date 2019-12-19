@@ -41,10 +41,9 @@ body {
   color: $primary;
 }
 .projects--wrapper {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
 }
 .projects--header {
@@ -54,18 +53,15 @@ body {
   font-style: normal;
   padding: 1rem;
 }
-.grid {
+.slider {
   display: flex;
-  flex-direction: row;
-  width: 50%;
-  overflow: scroll;
-  @media (max-width: 415px) {
-    width: 90%;
-    justify-content: center;
-  }
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
 }
 .item {
   display: flex;
+  flex-direction: row;
   height: 100%;
   width: 75rem;
 }
@@ -80,7 +76,6 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  height: 100%;
   font-size: 1.2rem;
   line-height: 2rem;
   width: 30rem;
@@ -91,4 +86,26 @@ body {
 .item--description {
   padding: 0.5rem 0 0.5rem 0;
   line-height: 1.4rem;
+}
+.pagination {
+  display: flex;
+  display: row;
+  list-style: none;
+  justify-content: space-around;
+  width: 40rem;
+  list-style-type: none;
+  padding-top: 1rem;
+}
+.dots {
+  display: flex;
+  text-align: center;
+  display: inline-block;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  background: black;
+  cursor: pointer;
+}
+.dot {
+  font-size: 1rem;
 }

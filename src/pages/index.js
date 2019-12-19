@@ -1,41 +1,49 @@
-import React, { Component } from "react";
-import projects from "../data/projects.json";
+import React, { useState, useEffect } from "react";
+import Projects from "../components/project";
+import Pagination from "../components/pagination";
+import axios from "axios";
 import "../styles/projects.scss";
 
-export default class Projects extends Component {
-  renderProjects() {
-    return projects.map((project, index) => {
-      const { name, backgroundImage, year, description, stack } = project;
-      return (
-        <div key={name}>
-          <div className="item">
-            <div className="item--image">
-              <img
-                loading="lazy"
-                src={backgroundImage}
-                alt="Project Image"
-              ></img>
-            </div>
-            <div className="item--text">
-              <p className="item--name">{name}</p>
-              <p className="item--year">{year}</p>
-              <p className="item--description">{description}</p>
-              <p className="item--stack">{stack}</p>
-            </div>
-          </div>
-        </div>
-      );
-    });
-  }
-  render() {
-    return (
-      <div>
-        <h2 className="projects--header">Projects</h2>
+function Project() {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [projectsPerPage] = useState(1);
 
-        <div className="projects--wrapper">
-          <div className="grid">{this.renderProjects()}</div>
+  useEffect(() => {
+    const fetchProject = async () => {
+      setLoading(true);
+      const res = await axios.get("http://localhost:3000/projects.json");
+      setProjects(res.data);
+      setLoading(false);
+    };
+    fetchProject();
+  }, []);
+
+  //Get current project
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  //change page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+  return (
+    <div>
+      <h2 className="projects--header">Projects</h2>
+      <div className="projects--wrapper">
+        <div className="slider">
+          <Projects projects={currentProjects} loading={loading} />
+          <Pagination
+            projectsPerPage={projectsPerPage}
+            totalProjects={projects.length}
+            paginate={paginate}
+          />
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
+export default Project;
