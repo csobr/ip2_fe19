@@ -94,18 +94,24 @@ body {
   justify-content: space-around;
   width: 40rem;
   list-style-type: none;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 .dots {
   display: flex;
+}
+.dot {
+  border: 0;
   text-align: center;
   display: inline-block;
   border-radius: 100%;
-  width: 2rem;
-  height: 2rem;
-  background: black;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: $primary;
   cursor: pointer;
-}
-.dot {
-  font-size: 1rem;
+  font-size: 0;
+  outline-style: dotted;
+  outline: none;
+  &:active {
+    background-color: pink;
+  }
 }
