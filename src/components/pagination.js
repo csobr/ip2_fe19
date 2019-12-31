@@ -11,9 +11,9 @@ const Pagination = ({ projectsPerPage, totalProjects, paginate }) => {
       <div className="pagination">
         {pageNumbers.map(number => (
           <div key={number} className="dots">
-            <button onClick={() => paginate(number)} className="dot">
+            <a onClick={() => paginate(number)} className="dot">
               {number}
-            </button>
+            </a>
           </div>
         ))}
       </div>

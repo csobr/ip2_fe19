@@ -58,12 +58,14 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  transition: all 4s ease-out;
 }
 .item {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 75rem;
+  transition: all 5s ease-out;
 }
 .item--image img {
   width: 40rem;
@@ -94,7 +96,8 @@ body {
   justify-content: space-around;
   width: 40rem;
   list-style-type: none;
-  padding: 1rem;
+  padding-top: 1rem;
+  transition: all 1s ease-out;
 }
 .dots {
   display: flex;
@@ -104,14 +107,16 @@ body {
   text-align: center;
   display: inline-block;
   border-radius: 100%;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   background: $primary;
   cursor: pointer;
-  font-size: 0;
-  outline-style: dotted;
-  outline: none;
-  &:active {
-    background-color: pink;
-  }
+}
+.dot {
+  font-size: 2rem;
+  color: $primary;
+}
+
+#__next-prerender-indicator {
+  display: none;
 }
