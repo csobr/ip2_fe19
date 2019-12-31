@@ -11,7 +11,7 @@ const Pagination = ({ projectsPerPage, totalProjects, paginate }) => {
       <ul className="pagination">
         {pageNumbers.map(number => (
           <li key={number} className="dots">
-            <a onClick={() => paginate(number)} className="">
+            <a onClick={() => paginate(number)} className="dot">
               {number}
             </a>
           </li>

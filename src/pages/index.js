@@ -32,6 +32,7 @@ function Project() {
   const paginate = pageNumber => setCurrentPage(pageNumber);
   return (
     <div>
+      {" "}
       <h2 className="projects--header">Projects</h2>
       <div className="projects--wrapper">
         <div className="slider">
