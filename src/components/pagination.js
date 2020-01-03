@@ -7,7 +7,7 @@ const Pagination = ({ projectsPerPage, totalProjects, paginate }) => {
   }
 
   return (
-    <nav>
+    <div>
       <div className="pagination">
         {pageNumbers.map(number => (
           <div key={number} className="dots">
@@ -17,7 +17,7 @@ const Pagination = ({ projectsPerPage, totalProjects, paginate }) => {
           </div>
         ))}
       </div>
-    </nav>
+    </div>
   );
 };
 export default Pagination;

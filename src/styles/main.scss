@@ -40,6 +40,35 @@ body {
   background-color: $secondary;
   color: $primary;
 }
+// nav
+nav {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  width: 40rem;
+  font-size: 1.2rem;
+  padding-left: 3rem;
+  ul {
+    display: grid;
+    font-weight: 600;
+    cursor: pointer;
+    width: 400px;
+    color: $primary;
+
+    li {
+      justify-content: center;
+      grid-row: 1;
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: $primary;
+      &:hover {
+        border-bottom: 0.1rem solid $primary;
+      }
+    }
+  }
+}
 .projects--wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -64,6 +93,7 @@ body {
   grid-template-columns: repeat(auto-fit, 40rem);
   grid-template-rows: auto;
   justify-content: center;
+  padding: 2rem;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */

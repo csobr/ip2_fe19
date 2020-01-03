@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Projects from "../components/project";
 import Pagination from "../components/pagination";
 import axios from "axios";
-import "../styles/projects.scss";
+import "../styles/main.scss";
+import Navbar from "../components/navBar";
 
 function Project() {
   const [projects, setProjects] = useState([]);
@@ -32,6 +33,7 @@ function Project() {
   const paginate = pageNumber => setCurrentPage(pageNumber);
   return (
     <div>
+      <Navbar />
       <div className="projects--wrapper">
         <div className="slider">
           <h2 className="projects--header">Projects</h2>
