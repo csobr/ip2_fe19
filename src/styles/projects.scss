@@ -42,45 +42,101 @@ body {
 }
 .projects--wrapper {
   display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  height: 100vh;
 }
 .projects--header {
+  padding: 1rem;
   text-align: center;
   font-weight: 900;
   font-size: 3rem;
   font-style: normal;
-  padding: 1rem;
 }
 .slider {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  transition: all 4s ease-out;
+  width: 100%;
+  transition: all 3s ease;
 }
 .item {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 75rem;
-  transition: all 5s ease-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40rem);
+  grid-template-rows: auto;
+  justify-content: center;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .item--image img {
   width: 40rem;
-  @media (max-width: 415px) {
-    width: 90%;
-  }
 }
 .item--text {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+  flex-direction: column;
+  height: 100%;
   font-size: 1.2rem;
   line-height: 2rem;
-  width: 30rem;
+  width: 40rem;
+  padding-left: 2rem;
+  @media (max-width: 415px) {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding-top: 1rem;
+  }
 }
 .item--name {
   font-weight: 700;
@@ -90,17 +146,17 @@ body {
   line-height: 1.4rem;
 }
 .pagination {
-  display: flex;
-  display: row;
+  display: grid;
+  width: 40rem;
+  margin: auto;
   list-style: none;
   justify-content: space-around;
-  width: 40rem;
   list-style-type: none;
-  padding-top: 1rem;
+  padding-top: 2rem;
   transition: all 1s ease-out;
 }
 .dots {
-  display: flex;
+  grid-row: 1;
 }
 .dot {
   border: 0;
