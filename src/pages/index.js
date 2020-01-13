@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
+import "../styles/main.scss";
 import Projects from "../components/project";
 import Pagination from "../components/pagination";
 import axios from "axios";
-import "../styles/main.scss";
 import Navbar from "../components/navBar";
 
 function Project() {
@@ -14,7 +14,7 @@ function Project() {
   useEffect(() => {
     const fetchProject = async () => {
       setLoading(true);
-      const res = await axios.get("http://localhost:3000/projects.json");
+      const res = await axios.get("projects.json");
       setProjects(res.data);
       setLoading(false);
     };
