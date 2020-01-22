@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import "../styles/main.scss";
 import Projects from "../components/project";
 import Pagination from "../components/pagination";
@@ -29,10 +30,20 @@ function Project() {
     indexOfLastProject
   );
 
-  //change page
+  //Change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
   return (
     <div>
+      <Head>
+        <title>Siham Hadi</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="A software developer and designer based in Stockholm."
+        />
+      </Head>
       <Navbar />
       <div className="projects--wrapper">
         <div className="slider">
