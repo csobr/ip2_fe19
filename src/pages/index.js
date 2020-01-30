@@ -37,7 +37,7 @@ function Project() {
       <Head>
         <title>Siham Hadi</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <meta charSet="utf-8" />
         <meta
           name="description"
